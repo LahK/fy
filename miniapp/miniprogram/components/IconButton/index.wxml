@@ -1,0 +1,14 @@
+<!--components/Button/index.wxml-->
+<view class="icon-button {{disabled ? 'disabled' : ''}}" hover-class="icon-button-hover" bindtap="onTap">
+  <image
+    class="{{shadow ? 'shadow' : ''}}"
+    src="{{image}}"
+    style="width: {{size}}px; height: {{size}}px;"
+  />
+  <text
+    wx:if="{{!hideTitle}}"
+    style="font-size: 10px;"
+  >
+    {{title}}
+  </text>
+</view>

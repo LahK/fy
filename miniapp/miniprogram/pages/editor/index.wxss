@@ -1,0 +1,144 @@
+/* miniprogram/pages/editor/index.wxss */
+.editor {
+  position: relative;
+  
+  flex: 1;
+
+  display: flex;
+}
+
+.specs {
+  position: absolute;
+
+  top: 16px;
+  bottom: 136px;
+
+  width: 100%;
+
+  /* border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.specs > .content {
+  width: calc(100% - 16px);
+  height: 150px;
+
+  margin: 0 8px;
+
+  background-color: white;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specs > .content > input {
+  width: 100%;
+  text-align: center;
+
+  font-size: 32px;
+  letter-spacing: 2.5px;
+  height: 1em;
+}
+
+.specs > .details {
+  width: calc(100% - 16px);
+  margin: 16px 8px;
+  padding-bottom: 16px;
+
+  overflow-y: scroll;
+}
+
+.specs > .details > .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.specs > .details > .section > .label {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.specs > .details > .section > .field {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.specs > .details > .section > .field:last-child {
+  padding-bottom: 8px;
+}
+
+.specs > .details > .section > .field > .label {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 10px;
+  margin: 8px 16px;
+}
+
+.specs > .details > .section > .field >.content {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.specs > .details > .section > .field > .content-hover {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #eee;
+}
+.specs > .details > .section > .field > .content > text {
+  flex: 1;
+}
+.specs > .details > .section > .field > .content text.highlight {
+  color: rgba(0, 139, 239, 0.75);
+}
+.specs > .details > .section > .field > .content > .indicator {
+  width: 16px;
+  height: 16px;
+}
+
+.recorder {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+
+  height: 120px;
+
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.recorder .recording-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 8px 0;
+}
+.recorder .recording-info text {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.recorder .control-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

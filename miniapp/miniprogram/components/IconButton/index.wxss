@@ -1,0 +1,53 @@
+/* components/Button/index.wxss */
+.icon-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+}
+.icon-button-hover {
+  opacity: 0.4;
+}
+.icon-button.disabled {
+  opacity: 0.6;
+}
+
+.icon-button image {
+  padding: 12px;
+}
+
+.icon-button image.shadow {
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+}
+
+.icon-button text {
+  margin-top: 4px;
+  color: rgba(0, 0, 0, 0.45);
+
+  position: absolute;
+  bottom: 0;
+}
+
+/* Pulse Grow */
+@keyframes hvr-pulse-grow {
+  to {
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  animation-name: hvr-pulse-grow;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

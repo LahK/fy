@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/create/index",
+    "pages/search/index",
+    "pages/library/index",
+    "pages/editor/index"
+  ],
+  "tabBar": {
+    "selectedColor": "#008bef",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/create/index",
+        "iconPath": "assets/images/add.png",
+        "selectedIconPath": "assets/images/add-active.png",
+        "text": "新建条目"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "iconPath": "assets/images/search.png",
+        "selectedIconPath": "assets/images/search-active.png",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/library/index",
+        "iconPath": "assets/images/library.png",
+        "selectedIconPath": "assets/images/library-active.png",
+        "text": "方言库"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "方言",
+    "navigationBarTextStyle": "black"
+  }
+}

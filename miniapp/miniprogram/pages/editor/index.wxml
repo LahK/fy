@@ -1,0 +1,86 @@
+<!--miniprogram/pages/editor/index.wxml-->
+<wxs src="../../scripts/utils.wxs" module="utils" />
+<view class=" container editor">
+  <view class="specs">
+    <view class="content">
+      <input value="吃饭"/>
+    </view>
+    <view class="details">
+      <view class="section">
+        <text class="label">基本信息</text>
+        <view class="field">
+          <text class="label">方言地区</text>
+          <view class="content" hover-class="content-hover">
+            <text>湖北 > 咸宁 > 崇阳</text>
+            <image class="indicator" src="../../assets/images/right-arrow.png"/>
+          </view>
+        </view>
+        <view class="field">
+          <text class="label">释义</text>
+          <view class="content" hover-class="content-hover">
+            <text>1. 同普通话 ”吃饭“。</text>
+          </view>
+          <view class="content" hover-class="content-hover">
+            <text>2. 第二个意思。</text>
+          </view>
+        </view>
+      </view>
+      <view class="section">
+        <text class="label">更多信息</text>
+        <view class="field">
+          <text class="label">例句</text>
+          <view class="content" hover-class="content-hover">
+            <text>你吃饭了吗？</text>
+            <image class="indicator" src="../../assets/images/speaker.png"/>
+          </view>
+          <view class="content" hover-class="content-hover">
+            <text>你还在长身体，要多吃饭！</text>
+            <image class="indicator" src="../../assets/images/speaker.png"/>
+          </view>
+        </view>
+        <view class="field">
+          <text class="label">对话</text>
+          <view class="content" hover-class="content-hover">
+            <text>甲：你吃饭了吗？</text>
+            <image class="indicator" src="../../assets/images/speaker.png"/>
+          </view>
+          <view class="content" hover-class="content-hover">
+            <text>乙：正要去吃呢。</text>
+            <image class="indicator" src="../../assets/images/speaker.png"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="recorder">
+    <view class="recording-info">
+      <text>{{utils.getRecordingTimeText(recordingLength)}}</text>
+    </view>
+    <view class="control-panel">
+      <IconButton
+        wx:if="{{status !== 'READY' && status !== 'RECORDING'}}"
+        image="../../assets/images/garbage.png"
+        title="重录"
+        size="18"
+        shadow
+        bindontap="onPressReset"
+        disabled="{{status !== 'DONE'}}"
+      />
+      <IconButton
+        image="{{mainButton.image}}"
+        title="{{mainButton.title}}"
+        shadow 
+        bindontap="onPressMainButton"
+      />
+      <IconButton
+        wx:if="{{status !== 'READY' && status !== 'RECORDING'}}"
+        image="../../assets/images/tick.png"
+        title="保存"
+        size="18"
+        shadow
+        bindontap="onPressSave"
+        disabled="{{status !== 'DONE'}}"
+      />
+    </view>
+  </view>
+</view>

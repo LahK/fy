@@ -1,0 +1,4 @@
+<!--miniprogram/pages/create/index.wxml-->
+<view>
+  <button bindtap="goTo">词</button>
+</view>

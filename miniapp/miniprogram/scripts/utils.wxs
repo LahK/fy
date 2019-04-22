@@ -1,0 +1,12 @@
+function addPrefixZero (n) {
+  return n < 10 ? '0' + n : '' + n
+}
+
+function getRecordingTimeText (lengthInSec, maxLengthInMin = 60) {
+  var minutes = parseInt(lengthInSec / 60, 10)
+  var seconds = parseInt(lengthInSec % 60, 10)
+
+  return addPrefixZero(minutes) + ':' + addPrefixZero(seconds) + ' / ' + addPrefixZero(maxLengthInMin) + ':00'
+}
+
+module.exports.getRecordingTimeText = getRecordingTimeText

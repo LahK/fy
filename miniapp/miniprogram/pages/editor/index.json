@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "IconButton": "../../components/IconButton/index"
+  },
+  "navigationBarTitleText": "新建方言条目"
+}
